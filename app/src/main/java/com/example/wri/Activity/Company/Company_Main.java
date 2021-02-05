@@ -48,13 +48,13 @@ public class Company_Main extends AppCompatActivity {
         Getdata(emailUser);
 
           //click search item in edittext
-         search_job_desc_main_company.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 Intent intent = new Intent(Company_Main.this, Company_Add_Search_Desc.class);
-                 startActivity(intent);
-             }
-         });
+//         search_job_desc_main_company.setOnClickListener(new View.OnClickListener() {
+//             @Override
+//             public void onClick(View v) {
+//                 Intent intent = new Intent(Company_Main.this, Company_Add_Search_Desc.class);
+//                 startActivity(intent);
+//             }
+//         });
 
 
         search_main_company.setOnClickListener(new View.OnClickListener() {

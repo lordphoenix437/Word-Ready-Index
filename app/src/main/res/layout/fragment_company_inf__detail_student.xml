@@ -34,6 +34,7 @@
                     android:layout_height="wrap_content"
                     android:drawablePadding="16dp"
                     android:hint="Họ và tên"
+                    android:editable="false"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -54,6 +55,7 @@
                     android:layout_height="wrap_content"
                     android:drawablePadding="16dp"
                     android:hint="Mã học viên"
+                    android:editable="false"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -74,6 +76,7 @@
                     android:layout_height="wrap_content"
                     android:drawablePadding="16dp"
                     android:hint="Ngày sinh"
+                    android:editable="false"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -94,6 +97,7 @@
                     android:layout_height="wrap_content"
                     android:drawablePadding="16dp"
                     android:hint="Chuyên ngành"
+                    android:editable="false"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -114,6 +118,7 @@
                     android:layout_height="wrap_content"
                     android:drawablePadding="16dp"
                     android:hint="Email"
+                    android:editable="false"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -134,6 +139,7 @@
                     android:layout_height="wrap_content"
                     android:drawablePadding="16dp"
                     android:hint="Số điện thoại"
+                    android:editable="false"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <Button

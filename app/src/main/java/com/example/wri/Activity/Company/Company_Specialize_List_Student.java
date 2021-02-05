@@ -41,7 +41,7 @@ public class Company_Specialize_List_Student extends AppCompatActivity {
     TextView tv_KhoaNganh;
     EditText edt_Seach_StudentOfMajor;
     ArrayList<Students> studentsArrayList;
-    String keyword,idmajor;
+    String keyword = "",idmajor;
     MajorItem majorItem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +52,8 @@ public class Company_Specialize_List_Student extends AppCompatActivity {
         init();
         DataIntent();
 //     Log.d("idgroup",majorItem.getId());
-        keyword ="" ;
-        Getdata(majorItem.getId(),keyword);
+
+        GetdataStu(majorItem.getId(),keyword);
         tv_KhoaNganh.setText(majorItem.getNamegmajor());
         imv_Back_List_StudentOfMajor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +82,7 @@ public class Company_Specialize_List_Student extends AppCompatActivity {
 
     }
 
-    private void Getdata(String idgmajor, String keyword) {
+    private void GetdataStu(String idgmajor, String keyword) {
         DataService dataService = APIService.getService();
         Call<List<Students>> callback = dataService.searchStudent_Of_Major(idgmajor,keyword);
         callback.enqueue(new Callback<List<Students>>() {
@@ -93,7 +93,7 @@ public class Company_Specialize_List_Student extends AppCompatActivity {
                 majorStudent_Adapter = new SearchStudent_Of_Major_Company_Adapter(getApplicationContext(), studentsArrayList);
                 rcv_student_ofMajor.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
                 rcv_student_ofMajor.setAdapter(majorStudent_Adapter);
-                Log.d("datastu",response.body().get(0).getId());
+
             }
 
             @Override
@@ -125,7 +125,7 @@ public class Company_Specialize_List_Student extends AppCompatActivity {
     }
     @Override
     protected void onResume() {
-        Getdata("idgmajor",keyword);
+        GetdataStu("idgmajor",keyword);
         super.onResume();
     }
 

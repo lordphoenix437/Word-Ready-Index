@@ -65,7 +65,7 @@ public class SearchStudent_Of_Major_Company_Adapter extends RecyclerView.Adapter
                 @Override
                 public void onClick(View v) {
                     Intent  i = new Intent(context, Company_Detail_Student.class);
-                    i.putExtra("com_stu",studentsMahjorListFull.get(getPosition()));
+                    i.putExtra("com_stu",studentsMajorList.get(getPosition()));
                     context.startActivity(i);
                 }
             });
