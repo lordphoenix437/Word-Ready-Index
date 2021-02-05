@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "859017924440",
+    "firebase_url": "https://wri-app.firebaseio.com",
+    "project_id": "wri-app",
+    "storage_bucket": "wri-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859017924440:android:14c4c46a1d8eff3a651f2d",
+        "android_client_info": {
+          "package_name": "com.example.wri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859017924440-d07iotcqk2io331l38q91ib7mgpfqm1q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnwXVo2xpMCX6Irm2T_HKOO_9LMTtbF_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859017924440-d07iotcqk2io331l38q91ib7mgpfqm1q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

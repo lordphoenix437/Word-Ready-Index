@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Company.Company_Detail"
+    android:orientation="vertical"
+    android:background="#fff">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarUser"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorGreen">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+            <TextView
+                android:id="@+id/txtMucLuc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Thông tin doanh nghiệp"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:onClick="onBack"
+                android:id="@+id/id_back_admin_company_list"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff">
+
+                <!--                <ImageButton-->
+<!--                    android:id="@+id/btn_pick_addclass"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignTop="@id/img_avatar_company"-->
+<!--                    android:layout_alignRight="@id/img_avatar_company"-->
+<!--                    android:layout_marginTop="-4dp"-->
+<!--                    android:layout_marginRight="-4dp"-->
+<!--                    android:background="@drawable/yellow_circle_bg"-->
+<!--                    android:padding="4dp"-->
+<!--                    android:src="@drawable/ic_camera" />-->
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_avatar_company"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="100dp"
+                    android:layout_alignParentStart="true"
+                    android:background="#fff"
+                    android:src="@drawable/ic_person_black" />
+
+                <Button
+                    android:id="@+id/btnchoose_Com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_toRightOf="@+id/img_avatar_company"
+                    android:background="@drawable/custtom_button"
+                    android:fontFamily="@font/hlv"
+                    android:text="chọn ảnh"
+                    android:textColor="#ffffff"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:text="Cập nhật"
+                    android:id="@+id/btnsubmit_imgCom"
+                    android:layout_below="@id/btnchoose_Com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/img_avatar_company"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/custtom_button"
+                    android:fontFamily="@font/hlv"
+                    android:textColor="#ffffff"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvTendoanhnghiep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên doanh nghiệp"
+                    android:layout_marginTop="5dp" />
+
+                <EditText
+                    android:id="@+id/edt_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/box_shadow"
+                    android:hint="Tên doanh nghiệp"
+                    android:padding="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Địa chỉ doanh nghiệp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+
+                    android:id="@+id/edt_company_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/box_shadow"
+                    android:hint="Địa chỉ doanh nghiệp"
+                    android:padding="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email doanh nghiệp"
+                    android:layout_marginTop="10dp"/>
+
+
+                <EditText
+                    android:id="@+id/edt_company_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/box_shadow"
+                    android:hint="Email"
+                    android:editable="false"
+                    android:padding="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số điện thoại"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/edt_company_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/box_shadow"
+                    android:hint="Số điện thoại"
+                    android:editable="false"
+                    android:padding="15dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_company_update"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/custtom_button"
+        android:fontFamily="@font/hlv"
+        android:text="Cập nhật"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+</LinearLayout>

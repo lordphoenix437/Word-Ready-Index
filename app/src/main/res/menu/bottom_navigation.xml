@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/forum"
+        android:enabled="true"
+        android:icon="@drawable/ic_supervised_user"
+        android:title="Tuyển dụng"/>
+    <item
+        android:id="@+id/course"
+        android:enabled="true"
+        android:icon="@drawable/ic_book"
+        android:title="Khóa học"/>
+    <item
+        android:id="@+id/point"
+        android:enabled="true"
+        android:icon="@drawable/ic_library"
+        android:iconTint="#fff"
+        android:title="Điểm"/>
+    <item
+        android:id="@+id/detail"
+        android:enabled="true"
+        android:icon="@drawable/ic_contact"
+        android:title="Thông tin"/>
+</menu>

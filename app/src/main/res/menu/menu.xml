@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item android:title="Thông tin"
+    android:id="@+id/info_Company"/>
+    <item android:title="Mail mẫu"
+        android:id="@+id/mail"/>
+    <item android:title="Tuyển dụng"
+        android:id="@+id/tuyendung"/>
+    <item android:title="Quên mật khẩu"
+        android:id="@+id/quenmatkhau"/>
+    <item android:title="Đổi mật khẩu"
+        android:id="@+id/doimatkhau"/>
+    <item android:title="Đăng xuất"
+        android:id="@+id/logout_student"/>
+
+</menu>

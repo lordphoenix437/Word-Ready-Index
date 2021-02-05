@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/box_shadow"
+    android:layout_margin="3dp"
+    android:orientation="vertical"
+    android:padding="5dp"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adt_img_addteacherclass_admin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:civ_border_width="0.1dp"
+        app:civ_border_color="#FF000000"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxteacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_marginRight="10dp"
+        android:textColor="#000"
+        android:buttonTint="@color/colorGreen"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/adt_nameteacher_addteacherclass_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên giảng viên"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/adt_img_addteacherclass_admin"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/adt_codeteacher_addteacherclass_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mã giảng viên"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/adt_img_addteacherclass_admin"
+        android:layout_below="@+id/adt_nameteacher_addteacherclass_admin"
+        android:textColor="#000"/>
+
+
+
+</RelativeLayout>

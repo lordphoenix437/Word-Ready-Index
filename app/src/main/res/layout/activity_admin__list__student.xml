@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Admin.Student.Admin_List_Student"
+    android:background="#fff">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarUser"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorGreen">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+            <TextView
+                android:id="@+id/txtMucLuc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="DANH SÁCH HỌC VIÊN"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:onClick="onBack"
+                android:id="@+id/id_back_admin_company_list"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/ln1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBarUser"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_margin="15dp">
+        <EditText
+            android:layout_weight="5"
+            android:id="@+id/edt_search_allstudent_student_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custtom_edt"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#000"
+            android:hint="Tìm kiếm (Mã học viên) ..."
+            />
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/search_allstudent_student_admin"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBarUser"
+            android:src="@drawable/ic_search"
+            android:layout_marginRight="25dp"
+            android:padding="4dp"
+            ></ImageView>
+    </LinearLayout>
+    <ScrollView
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ln1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_admin_listStudent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ln1"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"/>
+    </ScrollView>
+
+</RelativeLayout>

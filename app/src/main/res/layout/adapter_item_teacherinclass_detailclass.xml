@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/view2"-->
+<!--        app:cardCornerRadius="32dp"-->
+<!--        android:layout_marginLeft="4dp"-->
+<!--        >-->
+<!--        <ImageView-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:id="@+id/img_teacherinclass_detailclass"-->
+<!--            android:src="@drawable/it"-->
+<!--            />-->
+<!--    </androidx.cardview.widget.CardView>-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_teacherinclass_detailclass"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+
+        app:civ_border_width="0.1dp"
+        app:civ_border_color="#FF000000"/>
+</RelativeLayout>

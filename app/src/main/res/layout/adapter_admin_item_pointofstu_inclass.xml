@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/box_shadow"
+    android:layout_margin="3dp"
+    android:orientation="vertical"
+    android:padding="5dp"
+    >
+    <TextView
+        android:id="@+id/adt_edt_pointreqofstu_inclass_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:textColor="#000"
+        android:text="4"
+        android:gravity="right"
+        android:textSize="26dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/adt_edt_namegroupreqofstu_inclass_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên group tieu chi"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/adt_edt_namereqofstu_inclass_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ten tieu chi"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/adt_edt_namegroupreqofstu_inclass_admin"
+        android:textColor="#000"/>
+
+
+
+</RelativeLayout>

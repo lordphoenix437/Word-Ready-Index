@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarUser"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorGreen">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+            <TextView
+                android:id="@+id/txtMucLuc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Chỉnh sửa điểm"
+                android:textColor="#fff"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:onClick="onBack"
+                android:id="@+id/id_back_editpoint_class"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_below="@+id/toolBarUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/box_shadow"
+        android:padding="3dp"
+        >
+
+    <EditText
+        android:id="@+id/dialog_edt_pointreqofstu_inclass_admin"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:textColor="#000"
+        android:text="4"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="26dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/dialog_edt_namegroupreqofstu_inclass_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên group tieu chi"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/dialog_edt_namereqofstu_inclass_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ten tieu chi"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/dialog_edt_namegroupreqofstu_inclass_admin"
+        android:textColor="#000"/>
+
+    </RelativeLayout>
+    <Button
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/btn_edtpointStu_inclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật"
+        android:textSize="20dp"
+        android:fontFamily="@font/hlv"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custtom_button"
+        android:textColor="#ffffff"
+        android:textAllCaps="false"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="25dp"
+        />
+
+</RelativeLayout>

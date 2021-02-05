@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGreen"
+    android:gravity="center"
+    tools:context=".Activity.LoginandRegister.ReLogin"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/hlv"
+            android:gravity="center"
+            android:text="WELCOME!"
+            android:textColor="#FAF8F8"
+            android:textSize="45dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_relogin"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn"
+            android:elevation="5dp"
+            android:fontFamily="@font/hlv"
+            android:text="LOG IN"
+            android:textAllCaps="false"
+            android:textColor="#FFFBF8"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_re_signup"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn"
+            android:elevation="5dp"
+            android:fontFamily="@font/hlv"
+            android:text="SIGN UP"
+            android:textAllCaps="false"
+            android:textColor="#FFFBF8"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/icon_app"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/logoapp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.891" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

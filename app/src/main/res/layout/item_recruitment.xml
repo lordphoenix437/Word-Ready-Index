@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow_box"
+    android:layout_marginTop="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgv_thumbnailRecruitment"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icapp"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_courseRequirement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lập trình di động"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/tv_companyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Công ty TNHH UNITEST"
+            android:textSize="18sp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/tv_timeExpiration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="26/04/2020 - 10/12/2020"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+</LinearLayout>

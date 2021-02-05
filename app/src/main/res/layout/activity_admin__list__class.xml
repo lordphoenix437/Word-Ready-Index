@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.Admin.Class.Admin_List_Class"
+    android:background="#fff">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarUser"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorGreen">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+            <TextView
+                android:id="@+id/txtMucLuc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="DANH SÁCH LỚP HỌC"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:onClick="onBack"
+                android:id="@+id/id_back_admin_company_list"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/toolBarUser">
+    <LinearLayout
+        android:id="@+id/ln1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBarUser"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_margin="15dp">
+        <EditText
+            android:layout_weight="5"
+            android:id="@+id/edt_search_listallclass_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custtom_edt"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#000"
+            android:hint="Tìm kiếm ..."
+            />
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/img_search_listallclass_admin"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBarUser"
+            android:src="@drawable/ic_search"
+
+            android:layout_marginRight="25dp"
+            ></ImageView>
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Danh sách lớp học"
+            android:layout_marginLeft="25dp"
+            android:textColor="#000"/>
+    <ScrollView
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ln1"
+        android:layout_marginBottom="80dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_admin_listClass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ln1"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+       />
+    </ScrollView>
+    </LinearLayout>
+    <Button
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/btn_create_class_adminlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tạo lớp"
+        android:textSize="20dp"
+        android:fontFamily="@font/hlv"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custtom_button"
+        android:textColor="#ffffff"
+        android:textAllCaps="false"
+        android:layout_margin="20dp"
+
+        />
+</RelativeLayout>

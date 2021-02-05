@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Admin.Class.Admin_Edit_Class"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarUser"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorGreen">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+            <TextView
+                android:id="@+id/txtMucLuc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="CHỈNH SỬA THÔNG TIN LỚP"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:onClick="onBack"
+                android:id="@+id/id_back_admin_company_list"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/img_editclass_admin"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_person_black"
+                    android:background="#fff"/>
+
+                <ImageButton
+                    android:id="@+id/btn_pick_editclass_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/img_editclass_admin"
+                    android:layout_alignRight="@id/img_editclass_admin"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:background="@drawable/yellow_circle_bg"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_camera" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/id_class_editclass_admin"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+                <EditText
+                    android:padding="15dp"
+                    android:background="@drawable/box_shadow"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/edt_name_class_editclass_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập tên lớp"/>
+
+                <EditText
+                    android:padding="15dp"
+                    android:background="@drawable/box_shadow"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/edt_code_class_editclass_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập mã lớp"/>
+
+
+                <EditText
+                    android:padding="15dp"
+                    android:background="@drawable/box_shadow"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/edt_maxstudent_class_editclass_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập số lượng tối đa"
+                    android:inputType="number"/>
+                <EditText
+                    android:padding="15dp"
+                    android:background="@drawable/box_shadow"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/edt_opening_class_editclass_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ngày mở lớp: dd/mm/yyyy"
+                    android:inputType="number"/>
+                <EditText
+                    android:padding="15dp"
+                    android:background="@drawable/box_shadow"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/edt_description_class_editclass_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập mô tả"
+                    android:maxLines="7"
+                    android:lines="7"
+                    android:gravity="left"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/btn_update_class_editclass_admin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật"
+        android:textSize="20dp"
+        android:fontFamily="@font/hlv"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custtom_button"
+        android:textColor="#ffffff"
+       />
+</LinearLayout>

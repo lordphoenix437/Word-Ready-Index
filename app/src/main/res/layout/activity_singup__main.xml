@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGreen"
+    android:gravity="center"
+    tools:context=".Activity.LoginandRegister.Singup_Main"
+    >
+
+    <LinearLayout
+        android:layout_marginTop="-10dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/square"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hlv"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="ĐĂNG KÍ"
+            android:textColor="#FAF8F8"
+            android:textSize="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btn_signup_as_student"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:elevation="5dp"
+            android:text="học viên"
+
+            android:textColor="#FFFBF8"
+            android:textSize="20dp"
+            android:fontFamily="@font/hlv"
+            android:textStyle="bold"
+            />
+
+
+
+        <Button
+            android:id="@+id/btn_signup_as_company"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:elevation="5dp"
+            android:text="doanh nghiệp"
+            android:textColor="#FFFBF8"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/hlv"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_login_signmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bạn đã có tài khoản ? Login !"
+        android:textSize="16dp"
+        android:textColor="#AEFFFFFF"
+        android:fontFamily="@font/hlv"
+        android:textAlignment="center"
+        android:layout_marginTop="-10dp"
+        />
+    <ImageView
+        android:id="@+id/icon_app2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/logoapp"
+        />
+
+
+</LinearLayout>
