@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.wri.R;
 
-public class Company_Tao_Mail_Mau extends AppCompatActivity {
+public class Company_Changepassword extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_company__tao__mail__mau);
+        setContentView(R.layout.activity_company__quen__mat__khau);
     }
 }

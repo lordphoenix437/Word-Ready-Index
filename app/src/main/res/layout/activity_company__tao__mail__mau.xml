@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Company.Company_Tao_Mail_Mau"
+    tools:context=".Activity.Company.Company_ex_email"
     android:orientation="vertical"
     android:background="#fff">
     <androidx.appcompat.widget.Toolbar

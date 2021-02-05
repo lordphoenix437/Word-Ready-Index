@@ -1,6 +1,7 @@
 package com.example.wri.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wri.Activity.Company.Company_Detail_Student;
 import com.example.wri.Model.Students;
 import com.example.wri.R;
 import com.squareup.picasso.Picasso;
@@ -62,7 +64,9 @@ public class SearchStudent_Of_Major_Company_Adapter extends RecyclerView.Adapter
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Intent  i = new Intent(context, Company_Detail_Student.class);
+                    i.putExtra("com_stu",studentsMahjorListFull.get(getPosition()));
+                    context.startActivity(i);
                 }
             });
 

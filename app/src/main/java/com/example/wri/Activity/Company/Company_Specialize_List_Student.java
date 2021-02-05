@@ -51,9 +51,8 @@ public class Company_Specialize_List_Student extends AppCompatActivity {
 
         init();
         DataIntent();
-       Log.d("idgroup",majorItem.getId());
-        //sử dụng hàm tìm kiếm giống như bản trước
-        keyword = "";
+//     Log.d("idgroup",majorItem.getId());
+        keyword ="" ;
         Getdata(majorItem.getId(),keyword);
         tv_KhoaNganh.setText(majorItem.getNamegmajor());
         imv_Back_List_StudentOfMajor.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +93,7 @@ public class Company_Specialize_List_Student extends AppCompatActivity {
                 majorStudent_Adapter = new SearchStudent_Of_Major_Company_Adapter(getApplicationContext(), studentsArrayList);
                 rcv_student_ofMajor.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
                 rcv_student_ofMajor.setAdapter(majorStudent_Adapter);
+                Log.d("datastu",response.body().get(0).getId());
             }
 
             @Override

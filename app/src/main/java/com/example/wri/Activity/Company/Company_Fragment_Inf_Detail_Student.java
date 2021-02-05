@@ -2,9 +2,12 @@ package com.example.wri.Activity.Company;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -13,12 +16,24 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.example.wri.Model.MajorItem;
+import com.example.wri.Model.Students;
 import com.example.wri.R;
+import com.example.wri.Service.APIRetrofitClient;
+import com.example.wri.Service.APIService;
+import com.example.wri.Service.DataService;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Company_Fragment_Inf_Detail_Student extends Fragment {
 //    Button btnShowContactInfo, btnContactCenter;
@@ -26,7 +41,10 @@ public class Company_Fragment_Inf_Detail_Student extends Fragment {
     // listview JD
     String[] listJD = {"Web", "Android", "Maketing", "Quản lí nhân sự", "Fresher React"};
     ArrayAdapter<String> adapter;
-
+    Students students;
+    EditText tv_name_student_detail_com,tv_codestudent_detailstudent_com,tv_birthday_student_detail_com,tv_major_detail_com,
+            tv_email_detail_com,tv_phone_detail_com;
+    Button btn_detail_stucom;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -60,9 +78,50 @@ public class Company_Fragment_Inf_Detail_Student extends Fragment {
 //                DialogEmail();
 //            }
 //        });
+
+        DataIntent();
+        GetDataStu(students.getId());
         return view;
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        tv_name_student_detail_com = view.findViewById(R.id.tv_name_student_detail_com);
+        tv_codestudent_detailstudent_com = view.findViewById(R.id.tv_codestudent_detailstudent_com);
+        tv_birthday_student_detail_com = view.findViewById(R.id.tv_birthday_student_detail_com);
+        tv_major_detail_com = view.findViewById(R.id.tv_major_detail_com);
+        tv_email_detail_com = view.findViewById(R.id.tv_email_detail_com);
+        tv_phone_detail_com = view.findViewById(R.id.tv_phone_detail_com);
+        btn_detail_stucom = view.findViewById(R.id.btn_detail_stucom);
+        btn_detail_stucom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog();
+            }
+        });
+    }
+    private  void GetDataStu(String idstu){
+        DataService dataService = APIService.getService();
+        //Call<List<Students>> getDetailStudent_admin
+        Call<List<Students>> callback = dataService.getDetailStudent_admin(idstu);
+        callback.enqueue(new Callback<List<Students>>() {
+            @Override
+            public void onResponse(Call<List<Students>> call, Response<List<Students>> response) {
+                tv_name_student_detail_com.setText(students.getNameStudent());
+                tv_codestudent_detailstudent_com.setText(students.getCodeStudent());
+                tv_birthday_student_detail_com.setText(students.getBirthdayStudent());
+                tv_major_detail_com.setText(students.getMajor());
+                tv_email_detail_com.setText(students.getEmailUser());
+                tv_phone_detail_com.setText(students.getPhoneUser());
+            }
+
+            @Override
+            public void onFailure(Call<List<Students>> call, Throwable t) {
+
+            }
+        });
+    }
     private void Dialog(){
         final Dialog dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.custom_dialog);
@@ -175,5 +234,14 @@ public class Company_Fragment_Inf_Detail_Student extends Fragment {
             }
         });
         dialog.show();
+    }
+    //get data on active befor
+    private  void DataIntent(){
+        Intent intent = getActivity().getIntent();
+        if(intent != null){
+            if(intent.hasExtra("com_stu")) {
+                students = (Students) intent.getSerializableExtra("com_stu");
+            }
+        }
     }
 }
